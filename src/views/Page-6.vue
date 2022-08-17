@@ -30,32 +30,18 @@
 	</main>
 </template>
 
-<script>
-import { mapActions } from 'vuex';
+<script setup>
 import Navigation from '@/components/Navigation';
-import Doves from '@/components/Doves';
-import Logo from '@/components/Logo';
 import Background from '@/components/Background';
+import Logo from '@/components/Logo';
+import Doves from '@/components/Doves';
+import { onMounted } from 'vue';
+import store from '@/store/index';
 
-export default {
-	name: 'Page-6',
-	data() {
-		return {
-			pagePrev: 'page-5',
-			pageNext: 'page-7',
-		};
-	},
-	components: {
-		Doves,
-		Logo,
-		Background,
-		Navigation,
-	},
-	mounted() {
-		this.animate();
-	},
-	methods: {
-		...mapActions(['animate']),
-	},
-};
+const pagePrev = 'page-5';
+const pageNext = 'page-7';
+
+onMounted(() => {
+	store.dispatch('animate');
+});
 </script>
