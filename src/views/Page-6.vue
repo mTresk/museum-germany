@@ -1,0 +1,65 @@
+<template>
+  <main class="page">
+    <div class="screen">
+      <Background/>
+      <div class="screen__container">
+        <Logo/>
+        <div class="screen__body">
+          <Doves/>
+          <h2 class="screen__subtitle">Спецификация</h2>
+          <div class="screen__content">
+            <p class="screen__text">Птицы обладают спокойным характером, достаточно легко приспосабливаются к меняющимся условиям.</p>
+            <p class="screen__text">
+              Выводковые качества у породы хорошие, но процесс её разведения достаточно сложен, так как пернатые требовательны к составу кормовых смесей.
+            </p>
+            <p class="screen__text">
+              Порода относится к спортивным, поэтому птицам необходимо достаточно много места, из-за этого содержать их лучше в голубятне.
+            </p>
+            <p class="screen__text">
+              Голуби начинают участвовать в спортивных соревнованиях в 3-4 года. Именно в этом возрасте заканчивается обучение птиц. Они обладают отличной
+              памятью, легко обучаются, развивают большую скорость за относительно короткий промежуток времени и могут преодолевать расстояния свыше 1 000
+              километров. Несмотря на сравнительно небольшие размеры, очень выносливы. Хорошо ориентируются во время полёта.
+            </p>
+            <p class="screen__text">
+              Очень важно регулярно тренировать птиц. Из-за отсутствия тренировок, птица теряет форму и лётные качества ослабевают. В таком случае она может
+              служить в качестве декоративной, ведь представители данной породы обладают прекрасными внешними данными.
+            </p>
+          </div>
+          <Navigation :page-next="pageNext" :page-prev="pagePrev"/>
+        </div>
+      </div>
+    </div>
+  </main>
+</template>
+
+<script>
+import {mapActions} from 'vuex'
+import Navigation from "@/components/Navigation";
+import Doves from "@/components/Doves";
+import Logo from "@/components/Logo";
+import Background from "@/components/Background";
+
+export default {
+  name: "Page-6",
+  data() {
+    return {
+      pagePrev: 'page-5',
+      pageNext: 'page-7',
+    }
+  },
+  components: {
+    Doves,
+    Logo,
+    Background,
+    Navigation
+  },
+  mounted() {
+    this.animate()
+  },
+  methods: {
+    ...mapActions([
+      'animate'
+    ]),
+  }
+}
+</script>
