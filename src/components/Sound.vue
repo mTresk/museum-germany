@@ -1,46 +1,35 @@
 <template>
-	<div class="sound">
-		<img class="sound__icon" src="img/sound-off.svg" alt="" />
-		<audio class="sound__audio" src="files/germany.mp3"></audio>
-	</div>
+    <div @click="togglePlay" class="sound">
+        <img class="sound__icon" src="img/sound-off.svg" alt=""/>
+        <audio class="sound__audio" src="files/germany.mp3"></audio>
+    </div>
 </template>
 
-<script>
-export default {
-	name: 'Sound',
-	mounted() {
-		this.togglePlay();
-	},
-	methods: {
-		togglePlay() {
-			const playButton = document.querySelector('.sound__icon');
-			if (playButton) {
-				const myAudio = document.querySelector('.sound__audio');
-				let isPlaying = false;
+<script setup>
+import {ref} from "vue";
 
-				playButton.addEventListener('click', () => {
-					myAudio.onended = () => {
-						playButton.src = 'img/sound-off.svg';
-					};
-					if (isPlaying) {
-						myAudio.pause();
-						playButton.src = 'img/sound-off.svg';
-					} else {
-						myAudio.play();
-						playButton.src = 'img/sound-on.svg';
-					}
-				});
+const isPlaying = ref(false)
 
-				myAudio.onplaying = function () {
-					isPlaying = true;
-				};
-				myAudio.onpause = function () {
-					isPlaying = false;
-				};
-			}
-		},
-	},
-};
+const togglePlay = () => {
+    const icon = document.querySelector('.sound__icon');
+    const audio = document.querySelector('.sound__audio');
+
+    audio.onended = () => {
+        icon.src = 'img/sound-off.svg';
+    };
+    if (isPlaying.value) {
+        audio.pause();
+        icon.src = 'img/sound-off.svg';
+    } else {
+        audio.play();
+        icon.src = 'img/sound-on.svg';
+    }
+
+    audio.onplaying = () => {
+        isPlaying.value = true;
+    };
+    audio.onpause = () => {
+        isPlaying.value = false;
+    };
+}
 </script>
-
-<style scoped></style>
