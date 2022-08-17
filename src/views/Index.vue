@@ -2,7 +2,7 @@
   <main class="page">
     <div class="start-screen">
       <div class="start-screen__bg start-screen__bg-ibg">
-        <img src="/img/bg-1.jpg" alt=""/>
+        <img src="img/bg-1.jpg" alt=""/>
       </div>
       <div class="start-screen__doves">
         <svg width="620" height="463" viewBox="0 0 620 463" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,10 +29,10 @@
             природы и голубеводства
           </div>
           <div class="start-screen__feathers">
-            <object data="/img/feathers-animated.svg"></object>
+            <object data="img/feathers-animated.svg"></object>
           </div>
           <div class="start-screen__title">
-            <img src="/img/germany.svg" alt=""/>
+            <img src="img/germany.svg" alt=""/>
           </div>
           <router-link :to="{name: 'page-1'}" class="start-screen__button">начать</router-link>
         </div>

@@ -9,24 +9,24 @@
           <div class="screen__content">
             <div class="screen__images">
               <div style="width: 520px; height: 340px; margin: 0 40px" class="screen__image screen__image-ibg">
-                <img src="/img/2.jpg" alt="" />
+                <img src="img/2.jpg" alt="" />
               </div>
               <div style="width: 520px; height: 340px; margin: 0 40px" class="screen__image screen__image-ibg">
-                <img src="/img/3.jpg" alt="" />
+                <img src="img/3.jpg" alt="" />
               </div>
               <div style="width: 520px; height: 340px; margin: 0 40px" class="screen__image screen__image-ibg">
-                <img src="/img/4.jpg" alt="" />
+                <img src="img/4.jpg" alt="" />
               </div>
             </div>
             <div class="screen__images">
               <div style="width: 520px; height: 340px; margin: 0 40px" class="screen__image screen__image-ibg">
-                <img src="/img/5.jpg" alt="" />
+                <img src="img/5.jpg" alt="" />
               </div>
               <div style="width: 520px; height: 340px; margin: 0 40px" class="screen__image screen__image-ibg">
-                <img src="/img/6.jpg" alt="" />
+                <img src="img/6.jpg" alt="" />
               </div>
               <div style="width: 520px; height: 340px; margin: 0 40px" class="screen__image screen__image-ibg">
-                <img src="/img/7.jpg" alt="" />
+                <img src="img/7.jpg" alt="" />
               </div>
             </div>
           </div>

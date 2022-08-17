@@ -1,7 +1,7 @@
 <template>
   <div class="sound">
-    <img class="sound__icon" src="/img/sound-off.svg" alt=""/>
-    <audio class="sound__audio" src="/files/germany.mp3"></audio>
+    <img class="sound__icon" src="img/sound-off.svg" alt=""/>
+    <audio class="sound__audio" src="files/germany.mp3"></audio>
   </div>
 </template>
 

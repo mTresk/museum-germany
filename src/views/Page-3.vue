@@ -9,7 +9,7 @@
           <div class="screen__content">
             <div class="screen__images">
               <div style="width: 800px; height: 570px" class="screen__image screen__image-ibg">
-                <img src="/img/8.jpg" alt="" />
+                <img src="img/8.jpg" alt="" />
               </div>
               <div class="screen__info screen__info_right">
                 <p class="screen__text">Достоинства:</p>
